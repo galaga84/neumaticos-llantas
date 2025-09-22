@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="neumaticos.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" camera-orbit="87.65deg 88.43deg 3.865m" field-of-view="30deg" auto-rotate>
+      <button class="Hotspot" slot="hotspot-1" data-position="0.1416113977460296m 0.2286355938135673m 0.694700333611048m" data-normal="0.3939989094752662m -0.6892243854408663m -0.6080580612457673m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Llanta</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="0.13847209930157733m 0.23743769532158301m -0.7892341462097947m" data-normal="0.9987537258123836m -0.03259238564862893m 0.037798565761324975m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Neumático</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="0.009072374310853615m 0.44485742961795555m -0.5353642212314529m" data-normal="0.0025627047504373926m 0.9971122614473698m -0.07589842301177373m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Banda de rodadura</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  </body>
+</html>
